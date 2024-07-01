@@ -1,53 +1,67 @@
 import React from "react";
 import Slider from "react-slick";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Element } from "react-scroll";
-import { teamImage1 } from "../assets";
+import {
+  teamImage1,
+  teamImage2,
+  teamImage3,
+  teamImage4,
+  teamImage5,
+  teamImage6,
+  teamImage7,
+} from "../assets";
 
 const MeetOurTeam = () => {
   const teamMembers = [
     {
       name: "Mahmoud Atef",
       role: "Full Stack",
-      image: "https://via.placeholder.com/150",
-      email: "mahmoud@example.com",
+      image: teamImage3,
+      github: "https://github.com/Mahmoudbakar2002",
+      linkedin: "https://www.linkedin.com/in/mahmoud-atef-a399011b4/",
     },
     {
       name: "Mohamed Atef",
       role: "Full Stack",
-      image: "https://via.placeholder.com/150",
-      email: "mohamed@example.com",
+      image: teamImage7,
+      github: "https://github.com/MohamedAtefShata",
+      linkedin: "https://www.linkedin.com/in/mohamed-atef-shata/",
     },
     {
       name: "Omar Kenawi",
       role: "Front End",
       image: teamImage1,
-      email: "omar.sseeddeekk@gmail.com",
-      Linkedin: "https://www.linkedin.com/in/omar-kenawi",
+      github: "https://github.com/omarKenawi",
+      linkedin: "https://www.linkedin.com/in/omar-kenawi",
     },
     {
       name: "Mohamed Walied",
       role: "Front End",
-      image: "https://via.placeholder.com/150",
-      email: "walied@example.com",
+      image: teamImage5,
+      github: "https://github.com/Muhammed-Walied",
+      linkedin: "https://www.linkedin.com/in/muhammed-walied-281213277/",
     },
     {
       name: "Hazem Mohamed",
       role: "Front End",
-      image: "https://via.placeholder.com/150",
-      email: "hazem@example.com",
+      image: teamImage6,
+      github: "https://github.com/hazemmuuhammed",
+      linkedin: "https://www.linkedin.com/in/hazemmuuhammed/",
     },
     {
       name: "Abdallah Mohamed",
       role: "Back End",
-      image: "https://via.placeholder.com/150",
-      email: "abdallah@example.com",
+      image: teamImage2,
+      github: "https://github.com/Abdallah85",
+      linkedin: "https://www.linkedin.com/in/abdallah-mmohamed/",
     },
     {
       name: "Ahmed Hany",
       role: "Back End",
-      image: "https://via.placeholder.com/150",
-      email: "ahmed@example.com",
+      image: teamImage4,
+      github: "https://github.com/HNOONa-0",
+      linkedin: "https://www.linkedin.com/in/ahmed-hani-18b170193/",
     },
   ];
 
@@ -92,13 +106,13 @@ const MeetOurTeam = () => {
         <p className="text-gray-600 text-sm">{member.role}</p>
         <div className="mt-4 flex justify-center space-x-4">
           <a
-            href={`mailto:${member.email}`}
+            href={member.github}
             className="text-[#4CC3ED] hover:text-blue-600"
           >
-            <FaEnvelope size={24} />
+            <FaGithub size={24} />
           </a>
           <a
-            href={member.Linkedin}r
+            href={member.linkedin}
             className="text-[#4CC3ED] hover:text-blue-600"
           >
             <FaLinkedin size={24} />

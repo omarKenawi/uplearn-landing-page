@@ -13,7 +13,13 @@ import avatar from "./avatar.png";
 import quotationMark from "./quotationMark.png";
 import cta from "./cta.png";
 import header from "./header.png";
-import teamImage1 from "../assets/Team/myImage.jpg";
+import teamImage1 from "../assets/Team/keanwi.jpg";
+import teamImage2 from "../assets/Team/beso.jpg";
+import teamImage3 from "../assets/Team/beco.jpg";
+import teamImage4 from "../assets/Team/hany.jpg";
+import teamImage5 from "../assets/Team/wello.jpg";
+import teamImage6 from "../assets/Team/zoma.jpg";
+import teamImage7 from "../assets/Team/k3br.jpg";
 
 export {
   hamburgerMenu,
@@ -32,5 +38,11 @@ export {
   cta,
   header,
   teamImage1,
+  teamImage2,
+  teamImage3,
+  teamImage4,
+  teamImage5,
+  teamImage6,
+  teamImage7,
   // ContactUs,
 };
