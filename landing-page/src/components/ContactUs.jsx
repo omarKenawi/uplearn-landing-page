@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Element } from "react-scroll"; // Import Element from react-scroll
+import { Element } from "react-scroll";
 
 const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [submitSuccess, setSubmitSuccess] = useState(false); // State for submit success message
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -39,9 +40,15 @@ const ContactUs = () => {
     console.log("Email:", email);
     console.log("Message:", message);
 
-    // Optionally, you can reset the form fields after submission
+    // Reset fields and show success message
     setEmail("");
     setMessage("");
+    setSubmitSuccess(true);
+
+    // Optionally, you can reset the success message after a few seconds
+    setTimeout(() => {
+      setSubmitSuccess(false);
+    }, 5000); // Reset message after 5 seconds (5000 milliseconds)
   };
 
   const validateEmail = (email) => {
@@ -112,6 +119,9 @@ const ContactUs = () => {
             >
               Submit
             </button>
+            {submitSuccess && (
+              <p className="text-green-500 mt-2">Message sent successfully!</p>
+            )}
           </form>
         </div>
       </div>

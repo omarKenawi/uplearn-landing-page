@@ -65,8 +65,8 @@ const MeetOurTeam = () => {
   ];
 
   const TeamMemberCard = ({ member }) => (
-    <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
-      <div className="member bg-white rounded-lg shadow-lg p-6 text-center">
+    <div className="w-full sm:w-full lg:w-full p-4">
+      <div className="member bg-white rounded-lg shadow-lg p-6 text-center max-w-sm mx-auto">
         <img
           src={member.image}
           alt={member.name}
@@ -104,7 +104,7 @@ const MeetOurTeam = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap -mx-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {teamMembers.map((member, index) => (
             <TeamMemberCard key={index} member={member} />
           ))}

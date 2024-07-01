@@ -12,8 +12,9 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <div >
       <Navbar />
+      
       <div className="snap-container" id="hero">
         <Hero />
       </div>
