@@ -1,5 +1,4 @@
 import React from "react";
-import Slider from "react-slick";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Element } from "react-scroll";
 import {
@@ -65,38 +64,9 @@ const MeetOurTeam = () => {
     },
   ];
 
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: false,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: true,
-        },
-      },
-    ],
-  };
-
   const TeamMemberCard = ({ member }) => (
-    <div className="col-lg-4 mt-4 mb-4">
-      <div className="member bg-white rounded-lg shadow-lg p-6 text-center max-w-xs">
+    <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
+      <div className="member bg-white rounded-lg shadow-lg p-6 text-center">
         <img
           src={member.image}
           alt={member.name}
@@ -134,14 +104,10 @@ const MeetOurTeam = () => {
           </p>
         </div>
 
-        <div className="mt-8 m">
-          <Slider {...settings}>
-            {teamMembers.map((member, index) => (
-              <div key={index} className={`px-2 ${"ml-12"}`}>
-                <TeamMemberCard member={member} />
-              </div>
-            ))}
-          </Slider>
+        <div className="flex flex-wrap -mx-4">
+          {teamMembers.map((member, index) => (
+            <TeamMemberCard key={index} member={member} />
+          ))}
         </div>
       </div>
     </Element>
