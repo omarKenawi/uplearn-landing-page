@@ -1,69 +1,9 @@
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Element } from "react-scroll";
-import {
-  teamImage1,
-  teamImage2,
-  teamImage3,
-  teamImage4,
-  teamImage5,
-  teamImage6,
-  teamImage7,
-} from "../assets";
+import { teamMembers } from "../data/teem";
 
 const MeetOurTeam = () => {
-  const teamMembers = [
-    {
-      name: "Mahmoud Atef",
-      role: "Full Stack",
-      image: teamImage3,
-      github: "https://github.com/Mahmoudbakar2002",
-      linkedin: "https://www.linkedin.com/in/mahmoud-atef-a399011b4/",
-    },
-    {
-      name: "Mohamed Atef",
-      role: "Full Stack",
-      image: teamImage7,
-      github: "https://github.com/MohamedAtefShata",
-      linkedin: "https://www.linkedin.com/in/mohamed-atef-shata/",
-    },
-    {
-      name: "Omar Kenawi",
-      role: "Front End",
-      image: teamImage1,
-      github: "https://github.com/omarKenawi",
-      linkedin: "https://www.linkedin.com/in/omar-kenawi",
-    },
-    {
-      name: "Mohamed Walied",
-      role: "Front End",
-      image: teamImage5,
-      github: "https://github.com/Muhammed-Walied",
-      linkedin: "https://www.linkedin.com/in/muhammed-walied-281213277/",
-    },
-    {
-      name: "Hazem Mohamed",
-      role: "Front End",
-      image: teamImage6,
-      github: "https://github.com/hazemmuuhammed",
-      linkedin: "https://www.linkedin.com/in/hazemmuuhammed/",
-    },
-    {
-      name: "Abdallah Mohamed",
-      role: "Back End",
-      image: teamImage2,
-      github: "https://github.com/Abdallah85",
-      linkedin: "https://www.linkedin.com/in/abdallah-mmohamed/",
-    },
-    {
-      name: "Ahmed Hany",
-      role: "Back End",
-      image: teamImage4,
-      github: "https://github.com/HNOONa-0",
-      linkedin: "https://www.linkedin.com/in/ahmed-hani-18b170193/",
-    },
-  ];
-
   const TeamMemberCard = ({ member }) => (
     <div className="w-full sm:w-full lg:w-full p-4">
       <div className="member bg-white rounded-lg shadow-lg p-6 text-center max-w-sm mx-auto">

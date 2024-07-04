@@ -83,8 +83,15 @@ const Navbar = () => {
 
         {/* Button - Desktop */}
         <div className="hidden md:block">
-          <button className="px-8 py-3 rounded-md bg-blue-500 text-white font-semibold hover:bg-blue-600">
-            Let's Get Started
+          <button
+            className="px-8 py-3 rounded-md bg-blue-500 text-white font-semibold hover:bg-blue-600"
+            onClick={() =>
+              window.open(
+                "https://www.canva.com/design/DAGJnM21mcQ/VHZul6l3XjXjzWaSDHOpQg/edit"
+              )
+            }
+          >
+            show our persentation
           </button>
         </div>
 
@@ -170,8 +177,15 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <button className="mt-4 px-8 py-3 rounded-md bg-blue-500 text-white font-semibold hover:bg-blue-600 w-full">
-            Let's Get Started
+          <button
+            className="mt-4 px-8 py-3 rounded-md bg-blue-500 text-white font-semibold hover:bg-blue-600 w-full"
+            onClick={() =>
+              window.open(
+                "https://www.canva.com/design/DAGJnM21mcQ/VHZul6l3XjXjzWaSDHOpQg/edit"
+              )
+            }
+          >
+            show our persentation
           </button>
         </div>
       )}
